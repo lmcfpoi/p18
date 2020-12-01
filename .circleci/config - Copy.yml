@@ -1,0 +1,24 @@
+version: 2.1
+
+commands:
+  print_pipeline_id:
+    description: "This command either prints the default or the passed string param"
+    parameters:
+      to: 
+        type: string
+        default: ${CIRCLE_WORKFLOW_ID}
+    steps:
+      - run: echo << parameters.to >>
+# Caching between jobs mmmmmm
+jobs:
+  myjob1:
+    docker:
+      - image: cimg/base:2020.01
+    steps:
+      - print_pipeline_id:
+        to: "Chrrrrrisssssssstmas"
+
+workflows:
+   myflow1:
+     jobs:
+       - myjob1
