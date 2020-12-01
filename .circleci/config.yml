@@ -18,10 +18,7 @@ jobs:
       - printtext:
         to: "A Marvellooooous Chrrrrrisssssssstmas"
 
-# workflows:
-#   myflow1:
-#     jobs:
-#       - save_hello_world_output
-#       - print_output_file:
-#           requires:
-#           - save_hello_world_output
+workflows:
+   myflow1:
+     jobs:
+       - myjob1
