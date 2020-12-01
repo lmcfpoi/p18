@@ -8,14 +8,14 @@ commands:
         type: string
         default: "Merry Christmas"
     steps:
-      - run: echo << parameters.to >> # echoes the parameters section's, "to:", default or passed string
+      - run: echo << parameters.to >>
 # Caching between jobs mmmmmm
 jobs:
   myjob1:
     docker:
       - image: cimg/base:2020.01
     steps:
-      printtext:
+      - printtext:
         to: "A Marvellooooous Chrrrrrisssssssstmas"
 
 workflows:
