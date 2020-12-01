@@ -7,7 +7,10 @@ jobs:
     steps:
       - run:
           name: Step failure
-          command: return 1; echo "Job failed ....."
+          command: return 1
+      - run:
+          name: Run when step failure
+          command: echo "Job failed ....."
           when: on_fail
 
 workflows:
