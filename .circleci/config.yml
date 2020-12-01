@@ -16,7 +16,7 @@ jobs:
       - image: cimg/base:2020.01
     steps:
       - print_pipeline_id:
-        #to: "Chrrrrrisssssssstmas"
+        to: "Chrrrrrisssssssstmas"
 
 workflows:
    myflow1:
